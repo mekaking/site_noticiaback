@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-in;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all .2s ease-in;
+
+}
+ 
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+} 
+
+.header{
+    padding:2rem 9%;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow:0 .5rem 1.5rem 0 rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #c20000;
+}
+
+.header .logo{
+    font-size: 1.5rem;
+    color:#ffffff;
+}
+
+.header .navbar a{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-left: 2rem;
+} 
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha quando não há espaço suficiente */
+    justify-content: center; /* Alinha os elementos à esquerda */
+    margin: auto;
+    padding-top: 80px; 
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 6px solid red ;
+    width: 345px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 13px;
+    margin-left: 3rem;
+    height: 370px;
+    cursor: pointer;
+    transition: margin-right 0.2s ease-in; /* Adiciona transição para suavizar a mudança de margem */
+    margin: 0 3rem 3rem 0; /* Adiciona margem inferior para todos os cards, inicialmente configurada para 0 */
+
+}
+
+.card:hover{
+    background: #c20000;
+    color: #fff;
+}
+
+.card a:hover{
+    background: #c20000;
+    color: #fff;
+}
+
+.card h2{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 0;
+    color: rgb(204, 204, 204);
+}
+
+.card p{
+    font-size: 20px;
+    margin: 0;
+} 
+
+
+.card img{
+    background-size: cover; 
+    margin: 0;
+    height: 200px;
+    width: 325px;
+} 
+
+
+.sobre .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:.2rem; 
+}
+
+.sobre .row .content{
+    flex: 1 1 45rem;  
+}
+
+.sobre .row .content h3{
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+.sobre .row .content p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 1rem 0;    
+    margin-right: 10%;
+}
+
+
+.sobre .row .image{
+    flex: 1 1 45rem; 
+}
+
+.sobre .row .image img{
+    width: 100%;
+}
+
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+        flex-direction: column;
+
+    }
+
+    .header{
+        padding: 2rem;
+        flex-direction: column;
+
+    }
+    .card {
+        /* flex-direction: column; */
+    }
+    
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+        flex-direction: column;
+
+    }
+    .card {
+        margin-right: 0; /* Remove a margem direita para telas menores */
+        margin-bottom: 3rem;/* Adiciona margem inferior entre os cards empilhados */
+    }
+
+}
+
+
+
+
+
